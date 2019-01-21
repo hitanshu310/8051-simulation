@@ -1,0 +1,44 @@
+A51 MACRO ASSEMBLER  EXP2_045                                                             01/21/2019 15:55:40 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp2_045.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE exp2_045.A51 SET(SMALL) DEBUG PRINT(.\Listings\exp2_045.lst) OBJECT(.\O
+                      bjects\exp2_045.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 802E              2     SJMP MAIN
+0030                   3     ORG 0030H
+0030                   4     MAIN:
+0030 7400              5     MOV A, #00H
+0032 F590              6     MOV P1, A
+0034 79FF              7     MOV R1, #0FFH
+0036                   8     L2:
+0036 7AFF              9     MOV R2, #0FFH
+0038                  10     L1:
+0038 D8FE             11     DJNZ R0, L1
+003A D9FA             12     DJNZ R1, L2
+003C 7401             13     MOV A, #01H
+003E F590             14     MOV P1, A
+0040 80EE             15     JMP MAIN
+                      16     END
+A51 MACRO ASSEMBLER  EXP2_045                                                             01/21/2019 15:55:40 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+L1 . . . . . . . .  C ADDR   0038H   A   
+L2 . . . . . . . .  C ADDR   0036H   A   
+MAIN . . . . . . .  C ADDR   0030H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
